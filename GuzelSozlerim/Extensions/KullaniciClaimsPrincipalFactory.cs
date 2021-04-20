@@ -21,6 +21,7 @@ namespace GuzelSozlerim.Extensions
         protected override async Task<ClaimsIdentity> GenerateClaimsAsync(Kullanici user)
         {
             var identity = await base.GenerateClaimsAsync(user);
+            //biri class biri identity
             identity.AddClaim(new Claim("GorunenAd", user.GorunenAd));
             return identity;
         }

@@ -46,6 +46,13 @@
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2021 - GuzelSozlerim - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
+            <span class="float-right">
+                @*@await Component.InvokeAsync("RastgeleSoz")*@
+                @await Component.InvokeAsync("RastgeleSoz",new {enYeniyiGoster = true })
+                @*<vc:ratgele-soz en-yeniyi-goster="true"></vc:ratgele-soz>*@
+            </span>
+
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
